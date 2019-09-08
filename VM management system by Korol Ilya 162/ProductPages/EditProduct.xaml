@@ -1,0 +1,29 @@
+﻿<Page x:Class="VM_management_system_by_Korol_Ilya_162.EditProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VM_management_system_by_Korol_Ilya_162"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="525"
+      Title="EditProduct">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="34">Edit existing product</Label>
+        <Label  Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24">Name:</Label>
+        <TextBox x:Name="textboxNewName" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="20 100" FontSize="24" ></TextBox>
+        <Button x:Name="buttonConfirm" Grid.Column="1" Grid.Row="5" FontSize="30" Margin="15 20" Click="buttonConfirm_Click">Confirm changes</Button>
+        <Button x:Name="buttonGoBack" Grid.Row="5" FontSize="30" Margin="20" Click="buttonGoBack_Click" >Back</Button>
+    </Grid>
+</Page>

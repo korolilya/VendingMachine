@@ -1,0 +1,43 @@
+﻿<Page x:Class="VM_management_system_by_Korol_Ilya_162.CRUD_Terminals"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VM_management_system_by_Korol_Ilya_162"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="525"
+      Title="CRUD_Terminals">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="284*"/>
+            <RowDefinition Height="81*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0"   FontSize="32" FontWeight="Regular" HorizontalAlignment="Center" Margin="2,0,1.6,0.2"  >Terminal</Label>
+        <Label Grid.Column="1"    FontSize="34" FontWeight="Regular" HorizontalAlignment="Center" Margin="2,0,1.6,0.2"  >Products</Label>
+        <Label Grid.Column="3"    FontSize="34" FontWeight="Regular" HorizontalAlignment="Center" Margin="2,0,1.6,0.2"  >Money</Label>
+        <Button x:Name="buttonGoBack" Margin="5" Grid.Column="0" Grid.Row="9" FontSize="24" FontWeight="Regular" Click="buttonGoBack_Click" >Back</Button>
+        <Button x:Name="buttonAddTerminals" Margin="5" Grid.Column="1" Grid.Row="2" FontSize="24" FontWeight="Regular" Click="buttonAddTerminals_Click" >Add</Button>
+        <Button x:Name="buttonEditTerminals" Margin="5" Grid.Column="3" Grid.Row="2" FontSize="24" FontWeight="Regular" Click="buttonEditTerminals_Click"  >Edit</Button>
+        <ListBox x:Name="listBoxTerminals" Margin="5" Grid.Row="1" SelectionChanged="listBoxTerminals_SelectionChanged" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontSize="15">
+                            <TextBlock  Text="{Binding Location}" TextWrapping="Wrap"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="listboxTerminalInfo" Grid.Column="1"  Grid.Row="1" Margin="5" DisplayMemberPath="ProductInfo"></ListBox>
+        <ListBox x:Name="listboxMoneyInfo" Margin="5" Grid.Column="3" Grid.Row="1" DisplayMemberPath="MoneyInfo"></ListBox>
+    </Grid>
+</Page>

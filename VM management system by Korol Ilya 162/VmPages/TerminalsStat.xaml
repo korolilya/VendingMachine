@@ -1,0 +1,32 @@
+﻿<Page x:Class="VM_management_system_by_Korol_Ilya_162.TerminalsStat"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VM_management_system_by_Korol_Ilya_162"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="525"
+      Title="TerminalsStat">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="53*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label FontSize="34" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">Available requests</Label>
+        <Button x:Name="GoBack" Content="Back to main page" FontSize="34" Grid.ColumnSpan="2" Grid.Row="5" Margin="5" Click="GoBack_Click"/>
+        <Button x:Name="EmptyTerminal" Content="Empty terminal" Margin="10" FontSize="20"  Grid.Column="1" Grid.Row="1" Click="EmptyTerminal_Click"/>
+        <Button x:Name="TotalProfit" Content="Total profit" Margin="10" FontSize="20"  Grid.Column="1" Grid.Row="2" Click="TotalProfit_Click"/>
+        <Button x:Name="UnpopularProd" Content="5 unpopular&#xD;&#xA; products" Margin="10" FontSize="20"  Grid.Column="1" Grid.Row="3" Click="UnpopularProd_Click"/>
+        <ListBox x:Name="listboxStat" Grid.Row="1" Grid.RowSpan="3" DisplayMemberPath="Info" FontSize="18"></ListBox>
+    </Grid>
+</Page>
